@@ -1,6 +1,8 @@
-# last-line-stream [![Build Status](https://travis-ci.org/jamestalmage/last-line-stream.svg?branch=master)](https://travis-ci.org/jamestalmage/last-line-stream)
+# last-line-stream 
 
 > A PassThrough stream that keeps track of last line written.
+
+[![Build Status](https://travis-ci.org/jamestalmage/last-line-stream.svg?branch=master)](https://travis-ci.org/jamestalmage/last-line-stream) [![Coverage Status](https://coveralls.io/repos/jamestalmage/last-line-stream/badge.svg?branch=master&service=github)](https://coveralls.io/github/jamestalmage/last-line-stream?branch=master)
 
 
 ## Install
