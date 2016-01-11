@@ -1,6 +1,6 @@
 {
   "name": "last-line-stream",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A PassThrough stream that keeps track of last line written",
   "license": "MIT",
   "repository": "jamestalmage/last-line-stream",
