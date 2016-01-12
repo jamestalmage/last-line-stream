@@ -1,5 +1,6 @@
 import test from 'ava';
 import lastLineStream from './';
+import createTracker from './tracker';
 import through2 from 'through2';
 
 function concatStream() {
@@ -24,6 +25,20 @@ test('basic operation', t => {
 	t.is(stream.lastLine, 'foo');
 	stream.write('bar\n');
 	t.is(stream.lastLine, '');
+});
+
+test('tracker', t => {
+	var tracker = createTracker();
+	tracker.update('foo');
+	t.is(tracker.lastLine(), 'foo');
+	tracker.update('bar');
+	t.is(tracker.lastLine(), 'foobar');
+	tracker.update('\nbaz');
+	t.is(tracker.lastLine(), 'baz');
+	tracker.update('more\nfoo');
+	t.is(tracker.lastLine(), 'foo');
+	tracker.update('bar\n');
+	t.is(tracker.lastLine(), '');
 });
 
 test('pipes through to the first argument if supplied', t => {

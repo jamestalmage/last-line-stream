@@ -51,6 +51,20 @@ Type: `string`
 
 The last line written out to this stream. The `lastLine` value will grow until the stream sees a newline character (`'\n'`).
 
+## Low Level API
+
+A low-level non-stream based API is available. It has only two methods.
+
+```js
+var createTracker = require('last-line-stream/tracker');
+var tracker = createTracker();
+
+// append some text.
+tracker.update(someString);
+
+// Find the complete last line of all the text appended.
+tracker.lastLine();
+```
 
 ## License
 
