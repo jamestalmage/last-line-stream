@@ -16,7 +16,8 @@
     "test": "xo && nyc --reporter=lcov --reporter=text --cache ava"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "tracker.js"
   ],
   "keywords": [
     "stream",
